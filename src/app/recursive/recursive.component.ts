@@ -12,7 +12,7 @@ export interface Category {
   styleUrls: ['./recursive.component.scss'],
 })
 export class RecursiveComponent implements OnInit {
-  @Input() categories: Category[];
+  @Input() category: Category;
   depthLevel = 0;
   isExpanded = false;
 
@@ -20,11 +20,6 @@ export class RecursiveComponent implements OnInit {
 
   ngOnInit() {
     this.depthLevel = this.getDepthLevel(this.el.nativeElement);
-  }
-
-  @HostListener('click', ['$event'])
-  onClick() {
-    this.toggle();
   }
 
   getDepthLevel(element: HTMLElement): number {
