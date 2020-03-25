@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Category } from './recursive/recursive.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,41 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'recursiveComponentPOC';
+  categories: Category[] = [
+    {
+      name: 'main 1',
+      subcategories: [
+        {
+          name: 'sub 1',
+          subcategories: [
+            {
+              name: 'sub sub 1',
+              subcategories: []
+            },
+            {
+              name: 'sub sub 2',
+              subcategories: []
+            },
+          ]
+        },
+        {
+          name: 'sub 2',
+          subcategories: []
+        },
+      ]
+    },
+    {
+      name: 'main 2',
+      subcategories: [
+        {
+          name: 'sub 3',
+          subcategories: []
+        },
+        {
+          name: 'sub 4',
+          subcategories: []
+        },
+      ]
+    },
+  ];
 }

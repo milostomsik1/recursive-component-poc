@@ -1,0 +1,4 @@
+<p *ngFor="let category of categories">
+  {{ category.name }}
+  <app-recursive [categories]="category.subcategories"></app-recursive>
+</p>
