@@ -9,36 +9,44 @@ import { Category } from './recursive/recursive.component';
 export class AppComponent {
   categories: Category[] = [
     {
-      name: 'main 1',
+      name: 'main1',
+      slug: 'main1',
       subcategories: [
         {
-          name: 'sub 1',
+          name: 'sub1',
+          slug: 'main1/sub1',
           subcategories: [
             {
-              name: 'sub sub 1',
+              name: 'subsub1',
+              slug: 'main1/sub1/subsub1',
               subcategories: []
             },
             {
-              name: 'sub sub 2',
+              name: 'subsub2',
+              slug: 'main1/sub1/subsub2',
               subcategories: []
             },
           ]
         },
         {
           name: 'sub 2',
+          slug: 'main1/sub2',
           subcategories: []
         },
       ]
     },
     {
-      name: 'main 2',
+      name: 'main2',
+      slug: 'main2',
       subcategories: [
         {
-          name: 'sub 3',
+          name: 'sub3',
+          slug: 'main2/sub3',
           subcategories: []
         },
         {
-          name: 'sub 4',
+          name: 'sub4',
+          slug: 'main2/sub4',
           subcategories: []
         },
       ]
